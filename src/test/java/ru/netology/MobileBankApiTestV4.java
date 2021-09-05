@@ -1,10 +1,11 @@
-package ru.netology.rest;
+package ru.netology;
 
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
-public class MobileBankApiTestV1 {
+public class MobileBankApiTestV4 {
     @Test
     void shouldReturnDemoAccounts() {
         // Given - When - Then
@@ -16,6 +17,8 @@ public class MobileBankApiTestV1 {
                 .get("/demo/accounts")
                 // Проверки
                 .then()
-                .statusCode(200);
+                .statusCode(200)
+                .body(matchesJsonSchemaInClasspath("accounts.schema.json"))
+        ;
     }
 }
