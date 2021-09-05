@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class MobileBankApiTestV2 {
+public class V2MobileBankApiTest {
     @Test
     void shouldReturnDemoAccounts() {
         // Given - When - Then
