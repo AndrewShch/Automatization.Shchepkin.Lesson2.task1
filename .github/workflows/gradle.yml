@@ -3,7 +3,12 @@
 
 name: Java CI with Gradle
 
+<<<<<<< HEAD
 on: [ push, pull_request ]
+=======
+on: [push, pull_request]
+
+>>>>>>> 3a956a65ac8c47a15d2e2027a65f6ee39fd603f1
 
 
 
