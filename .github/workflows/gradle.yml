@@ -3,14 +3,8 @@
 
 name: Java CI with Gradle
 
-<<<<<<< HEAD
+
 on: [ push, pull_request ]
-=======
-on: [push, pull_request]
-
->>>>>>> 3a956a65ac8c47a15d2e2027a65f6ee39fd603f1
-
-
 
 jobs:
   build:
@@ -25,9 +19,9 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
           cache: gradle
-      - name: start app-mbank.jar
-        run: java -jar ./artifacts/app-mbank.jar &
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
+      - name: Start app-mbank.jar
+        run: java -jar ./artifacts/app-mbank.jar &
       - name: Build with Gradle
         run: ./gradlew build
